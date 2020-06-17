@@ -1,4 +1,4 @@
-const mongoose = require('../database');
+const mongoose = require('../../database');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
@@ -21,6 +21,17 @@ const userSchema = new mongoose.Schema({
         required:true,
         select:false, // prevent passwords from showing up when searching users
     },
+
+    passwordResetToken: {
+        type:String,
+        select:false,
+    },
+
+    passwordResetExpires: {
+        type:Date,
+        select:false,
+    },
+
 
     createdAt: {
         type:Date,
