@@ -1,5 +1,5 @@
 const express = require ('express');
-const User = require('../models/user');
+const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const mailer = require('../../modules/mailer')
